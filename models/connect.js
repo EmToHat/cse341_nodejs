@@ -11,7 +11,7 @@ const initializeDB = (callback) => {
         console.log('Database is initialized!');
         return callback(null, db);
     }
-    MongoClient.connect(process.env.connectionString)
+    MongoClient.connect(process.env.Mongodb_URI)
     //promise
     .then((client) => {
         console.log('Connected to database');
