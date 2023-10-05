@@ -1,0 +1,5 @@
+// LOCALHOST ### GET http://localhost:8080/contacts
+// LOCALHOST ### GET http://localhost:8080/contacts/651b06bf9ef5133f10db9bf1 
+
+// RENDER ### GET https://emileehatch-cse341.onrender.com/contacts 
+// RENDER ### GET https://emileehatch-cse341.onrender.com/contacts/651b06bf9ef5133f10db9bf1
