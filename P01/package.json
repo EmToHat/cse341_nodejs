@@ -1,0 +1,26 @@
+{
+  "name": "cse341-nodejs",
+  "version": "1.0.0",
+  "description": "Publish API to the web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmToHat/cse341-nodejs.git"
+  },
+  "author": "Emilee Hatch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmToHat/cse341-nodejs/issues"
+  },
+  "homepage": "https://github.com/EmToHat/cse341-nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
