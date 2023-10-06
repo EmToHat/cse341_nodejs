@@ -1,0 +1,29 @@
+[
+   {
+    "_id": { "$oid": "65203a34f7cf2a1fc42a1f94"},
+    "contact_id": 1,
+    "firstName": "Daniel",
+    "lastName": "Torres",
+    "email": "danieltorr@testemail.com",
+    "favoriteColor": "Blue",
+    "birthday": "06/21/95"
+   },
+   {
+    "_id": { "$oid": "65203a34f7cf2a1fc42a1f95"},
+    "contact_id": 2,
+    "firstName": "Kim",
+    "lastName": "David",
+    "email": "kimdav@testemail.com",
+    "favoriteColor": "Green",
+    "birthday": "02/12/93"
+   },
+   {
+    "_id": { "$oid": "65203a34f7cf2a1fc42a1f96"},
+    "contact_id": 3,
+    "firstName": "Kim",
+    "lastName": "David",
+    "email": "kimdav@testemail.com",
+    "favoriteColor": "Green",
+    "birthday": "02/12/93"
+   } 
+]

@@ -1,5 +1,81 @@
-// LOCALHOST ### GET http://localhost:8080/contacts
-// LOCALHOST ### GET http://localhost:8080/contacts/651b06bf9ef5133f10db9bf1 
+// LOCALHOST ---------------------------------------------------------------
 
-// RENDER ### GET https://emileehatch-cse341.onrender.com/contacts 
-// RENDER ### GET https://emileehatch-cse341.onrender.com/contacts/651b06bf9ef5133f10db9bf1
+###
+// This GET request gathers all of the contacts.
+GET http://localhost:8080/contacts
+
+###
+// This GET request gathers a specific contact by their id.
+GET http://localhost:8080/contacts/651f4191724f3ee3b26ced75
+
+
+###
+// This POST request creates a new contact.
+
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"test", 
+    "lastName":"test", 
+    "email":"test@testemail.com", 
+    "favoriteColor":"test color", 
+    "birthday":"xx/xx/xxxx"
+}
+
+###
+// This PUT request updates a specified contact.
+PUT http://localhost:8080/contacts/65207230ac05fd56d6a1df03 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Heather", 
+    "lastName":"Hacker", 
+    "email":"HackerHea@testemail.com", 
+    "favoriteColor":"Green", 
+    "birthday":"05/27/98"
+}
+
+###
+// This DELETE request deletes a contact by finding the specified id.
+DELETE http://localhost:8080/contacts/652071b7de0bbe9824737756 HTTP/1.1
+
+
+
+
+
+
+// RENDER ---------------------------------------------------------------
+
+### 
+GET https://emileehatch-cse341.onrender.com/contacts 
+
+### 
+GET https://emileehatch-cse341.onrender.com/contacts/651b06bf9ef5133f10db9bf1
+
+### 
+POST https://emileehatch-cse341.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"test", 
+    "lastName":"test", 
+    "email":"test@testemail.com", 
+    "favoriteColor":"test color", 
+    "birthday":"xx/xx/xxxx"
+}
+
+### 
+PUT https://emileehatch-cse341.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Heather", 
+    "lastName":"Hacker", 
+    "email":"HackerHea@testemail.com", 
+    "favoriteColor":"Green", 
+    "birthday":"05/27/98"
+}
+
+### 
+DELETE https://emileehatch-cse341.onrender.com/contacts/651b06bf9ef5133f10db9bf1

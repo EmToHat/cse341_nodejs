@@ -30,9 +30,11 @@ const getASingleContact = async (req, res, next) => {
     });
 };
 
-// Post Function
+// POST Function
 const createContact = async (req, res) => {
+    const userID = new ObjectId(req.params.id);
     const contact = {
+      _id: userID,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -44,6 +46,7 @@ const createContact = async (req, res) => {
     .db('ContactsDB')
     .collection('Contacts')
     .insertOne(contact);
+    //.replaceOne({ _id: userID }, contact);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
@@ -51,17 +54,19 @@ const createContact = async (req, res) => {
     }
 };
 
-// Put function
+// PUT function
 const updateContact = async (req, res) => {
     const userID = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
     const contact = {
+      _id: userID,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday
     };
+
     const response = await mongodb
       .getDB()
       .db('ContactsDB')
@@ -75,14 +80,15 @@ const updateContact = async (req, res) => {
     }
 };
 
-// Delete Function
+
+// DELETE Function
 const deleteContact = async (req, res) => {
     const userID = new ObjectId(req.params.id);
     const response = await mongodb
         .getDB()
         .db('ContactsDB')
         .collection('Contacts')
-        .remove({ _id: userID }, true);
+        .deleteOne({ _id: userID }, true);
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();
