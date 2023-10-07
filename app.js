@@ -3,6 +3,8 @@ const
   bodyParser = require('body-parser'),
   mongodb = require('./models/connect'), // database connection
   cors = require('cors'),
+  swaggerUi = require('swagger-ui-express'),
+  swaggerDocument = require('./swagger-output.json'); 
   port = process.env.port || 8080,
   app = express();
 
@@ -17,7 +19,8 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', INDEX_Route);
+  .use('/', INDEX_Route)
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 mongodb.initializeDB((err, mongodb) => {
   if (err) {

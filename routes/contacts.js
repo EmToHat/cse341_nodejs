@@ -5,7 +5,9 @@ const
 // import from the controller folder
 const CONTACT_Controller = require('../controllers/contacts');
 
-// router gets the information from the two functions
+
+// router gets the information from the functions getAllContactInformation, 
+// getASingleContact, createContact, updateContact, and deleteContact
 router
     // GET
     .get('/', CONTACT_Controller.getAllContactInformation)
